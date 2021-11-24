@@ -1,0 +1,30 @@
+# Built with EasyBuild version 4.4.1 on 2021-07-29_13-21-43
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+#
+# Copyright:: 
+# Authors::sabryr@gmail.com
+# License::   3-clause BSD
+##
+
+easyblock = 'Conda'
+
+name = "HybPiper"
+version = "14.0"
+
+homepage = "https://github.com/mossmatters/HybPiper"
+description = """ HybPiper was designed for targeted sequence capture, in which DNA sequencing libraries are enriched for gene regions of interest, especially for phylogenetics. HybPiper is a suite of Python scripts that wrap and connect bioinformatics tools in order to extract target sequences from high-throughput DNA sequencing reads. """
+
+toolchain = SYSTEM
+
+builddependencies = [('Miniconda3', '4.9.2')]
+
+environment_file = "/cluster/projects/nn9997k/sabryr/HybPiper/HybPiper.yml"
+
+#sanity_check_paths = {
+#    'files': ["bin/conda"],
+#    'dirs': []
+#}
+
+moduleclass = 'tools'
+
