@@ -35,7 +35,7 @@ CURRENT_FASTA=$CURRENT_NAME"_READ*.fastq"
 echo "(Task" $SLURM_ARRAY_TASK_ID") Current name="$CURRENT_NAME"  Fastaq file="$CURRENT_FASTA
 
 
-echo "Fabiricate command and run"
+echo "Fabricate command and run"
 reads_first.py --cpu=${SLURM_NTASKS} -b mega353.fasta -r $CURRENT_FASTA --prefix $CURRENT_NAME --bwa
 
 
